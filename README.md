@@ -85,3 +85,5 @@ Setting up Slack Notification
 3) Under `Features` >> `Incoming Webhooks`, Activate incoming webhooks
 4) Click on `Add New Webhook to Workspace` >> Select the channel >> Click on Allow
 5) Copy the Webhook Url and paste it in the `python file` inside the function `slackNotif(data_json)`
+
+![Slack Notification](https://github.com/souravatta/monitoring-tool/blob/main/slack_notification.png?raw=true)
