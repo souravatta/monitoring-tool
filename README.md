@@ -74,7 +74,9 @@ Usage
 	1) host (to monitor the network latency): Ex. google.com
 	2) path of mount point or disk: Ex. /
 3) Install the dependiencies: `pip install requirements.txt`
-4) Command to run: `sudo python3 monitoring_tool.py google.com /`
+4) Command to run: `sudo python monitoring_tool.py -m -c`
+
+> **Note:** You can use the command `sudo python monitoring.py -h` or `sudo python monitoring.py --help` to get useful usage message. 
 ---
 
 Setting up Slack Notification
