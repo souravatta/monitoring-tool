@@ -5,6 +5,7 @@ import psutil
 import sys
 import json
 import requests
+import argparse
 
 # Slack Notification
 def slackNotif(data_json):
@@ -68,17 +69,28 @@ def networkLatency(host):
 # Main Funtion
 # Display stats in particular time
 def main():
-    x = sys.argv[1]
-    y = sys.argv[2]
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("System Stats at", current_time," :")
 
-    cpuUsage()
-    memoryUsage()
-    diskUsage( path=y)
-    networkLatency( host=x)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--cpu', action='store_true', dest='cpu', help="shows CPU Usage")
+    parser.add_argument('-m', '--memory', action='store_true', dest='memory', help="shows Memory Usage")
+    parser.add_argument('-d', '--disk', type=str, dest='disk', help="shows Disk Usage")
+    parser.add_argument('-n', '--network', type=str, dest='network', help="shows Network Latency")
+    args = parser.parse_args()
+
+    #print(args)
+
+    if args.cpu:
+        cpuUsage()
+    if args.memory:
+        memoryUsage()
+    if args.disk:
+       diskUsage(path=args.disk)
+    if args.network:
+       networkLatency(host=args.network)
 
 if __name__ == "__main__":
     main()
