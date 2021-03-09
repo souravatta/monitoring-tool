@@ -76,7 +76,9 @@ Usage
 3) Install the dependiencies: `pip install requirements.txt`
 4) Command to run: `sudo python monitoring_tool.py -m -c`
 
-> **Note:** You can use the command `sudo python monitoring.py -h` or `sudo python monitoring.py --help` to get useful usage message. 
+> **Note:** You can use the command `sudo python monitoring.py -h` or `sudo python monitoring.py --help` to get useful usage message.
+
+![Command Usage](https://github.com/souravatta/monitoring-tool/blob/main/command_usage.png?raw=true)
 ---
 
 Setting up Slack Notification
